@@ -302,23 +302,23 @@ const Portfolio = () => {
                 <tr key={idx} style={{ color: "#e1e1e6", borderBottom: '1px solid rgba(255,255,255,0.05)', transition: 'background 0.2s' }}
                   onMouseOver={e => e.currentTarget.style.background = 'rgba(138,138,240,0.07)'}
                   onMouseOut={e => e.currentTarget.style.background = 'transparent'}>
-                  <td style={{ padding: 12, display: 'flex', alignItems: 'center', gap: 8, fontWeight: 600 }}>
+                  <td data-label="Coin" style={{ padding: 12, display: 'flex', alignItems: 'center', gap: 8, fontWeight: 600 }}>
                     <img src={item.coin.image} alt={item.coin.name} style={{ width: 22, height: 22, borderRadius: '50%' }} />
                     {item.coin.symbol}
                   </td>
-                  <td style={{ padding: 12, textAlign: "right" }}>${item.purchase_price.toLocaleString()}</td>
-                  <td style={{ padding: 12, textAlign: "right" }}>${item.coin.current_price.toLocaleString()}</td>
-                  <td style={{ padding: 12, textAlign: "right", color: is24hUp ? '#4cd787' : '#ff5c75' }}>
+                  <td data-label="Buy Price" style={{ padding: 12, textAlign: "right" }}>${item.purchase_price.toLocaleString()}</td>
+                  <td data-label="Current Price" style={{ padding: 12, textAlign: "right" }}>${item.coin.current_price.toLocaleString()}</td>
+                  <td data-label="24h Change" style={{ padding: 12, textAlign: "right", color: is24hUp ? '#4cd787' : '#ff5c75' }}>
                     {item.coin.price_change_percentage_24h.toFixed(2)}%
                   </td>
-                  <td style={{ padding: 12, textAlign: "right" }}>{item.quantity}</td>
-                  <td style={{ padding: 12, textAlign: "right" }}>${currentValue.toLocaleString()}</td>
-                  <td style={{ padding: 12, textAlign: "right", color: isProfit ? '#4cd787' : '#ff5c75' }}>
+                  <td data-label="Quantity" style={{ padding: 12, textAlign: "right" }}>{item.quantity}</td>
+                  <td data-label="Total Value" style={{ padding: 12, textAlign: "right" }}>${currentValue.toLocaleString()}</td>
+                  <td data-label="Profit/Loss" style={{ padding: 12, textAlign: "right", color: isProfit ? '#4cd787' : '#ff5c75' }}>
                     ${profitOrLoss.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                   </td>
-                  <td style={{ padding: 12 }}>{item.date}</td>
-                  <td style={{ padding: 12, maxWidth: 100, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{item.notes}</td>
-                  <td style={{ padding: 12, textAlign: "center" }}>
+                  <td data-label="Date" style={{ padding: 12 }}>{item.date}</td>
+                  <td data-label="Notes" style={{ padding: 12, maxWidth: 100, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{item.notes}</td>
+                  <td data-label="Actions" style={{ padding: 12, textAlign: "center" }}>
                     <button onClick={() => handleEdit(idx)} style={{ background: 'none', border: 'none', color: '#8a8af0', fontWeight: 700, fontSize: 18, cursor: 'pointer', marginRight: 8, transition: 'color 0.2s' }}
                       onMouseOver={e => e.currentTarget.style.color = '#fff'}
                       onMouseOut={e => e.currentTarget.style.color = '#8a8af0'}>✏️</button>

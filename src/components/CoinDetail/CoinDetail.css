@@ -392,7 +392,34 @@
     transform: translateX(-4px);
 }
 
-@media screen and (max-width: 768px) {
+/* Mobile-first responsive design */
+@media (max-width: 1024px) {
+    .coin-detail {
+        padding: 1.5rem;
+    }
+    
+    .coin-detail-container {
+        padding: 1.25rem;
+    }
+    
+    .coin-title h1 {
+        font-size: 1.6rem;
+    }
+    
+    .current-price h2 {
+        font-size: 1.8rem;
+    }
+    
+    .coin-stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .coin-detail {
+        padding: 1rem;
+    }
+    
     .coin-detail-container {
         padding: 1rem;
     }
@@ -401,19 +428,43 @@
         flex-direction: column;
         text-align: center;
         gap: 1rem;
+        padding: 1.25rem;
     }
 
     .coin-title {
         flex-direction: column;
         text-align: center;
+        gap: 0.75rem;
+    }
+    
+    .coin-title img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .coin-title h1 {
+        font-size: 1.4rem;
     }
 
     .coin-price-container {
         text-align: center;
     }
+    
+    .current-price h2 {
+        font-size: 1.6rem;
+    }
 
     .coin-stats-grid {
         grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+    
+    .stat-card {
+        padding: 1rem;
+    }
+    
+    .stat-card p {
+        font-size: 1rem;
     }
 
     .converter-grid {
@@ -427,6 +478,12 @@
 
     .coin-info-section {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1.25rem;
+    }
+    
+    .coin-description {
+        font-size: 0.9rem;
     }
 
     .chart-header {
@@ -437,5 +494,198 @@
     .timeframe-selector {
         width: 100%;
         justify-content: space-between;
+    }
+    
+    .timeframe-selector button {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+    }
+    
+    .chart-container {
+        padding: 1.25rem;
+    }
+    
+    .back-button {
+        padding: 0.7rem 1.25rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .coin-detail {
+        padding: 0.75rem;
+    }
+    
+    .coin-detail-container {
+        padding: 0.75rem;
+    }
+    
+    .coin-header {
+        padding: 1rem;
+        border-radius: 8px;
+    }
+    
+    .coin-title img {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .coin-title h1 {
+        font-size: 1.2rem;
+    }
+    
+    .coin-rank {
+        font-size: 0.8rem;
+    }
+    
+    .current-price h2 {
+        font-size: 1.4rem;
+    }
+    
+    .stat-card {
+        padding: 0.875rem;
+    }
+    
+    .stat-card h4 {
+        font-size: 0.8rem;
+    }
+    
+    .stat-card p {
+        font-size: 0.9rem;
+    }
+    
+    .chart-container {
+        padding: 1rem;
+        border-radius: 8px;
+    }
+    
+    .chart-header h3 {
+        font-size: 0.8rem;
+    }
+    
+    .timeframe-selector button {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.8rem;
+        border-radius: 6px;
+    }
+    
+    .coin-info-section {
+        padding: 1rem;
+        border-radius: 8px;
+    }
+    
+    .coin-description {
+        font-size: 0.85rem;
+    }
+    
+    .coin-description h3,
+    .additional-info h3 {
+        font-size: 1rem;
+    }
+    
+    .converter-card {
+        padding: 1rem;
+        border-radius: 8px;
+    }
+    
+    .converter-card h3 {
+        font-size: 0.8rem;
+    }
+    
+    .converter-input input {
+        padding: 0.7rem 0.875rem;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    .back-button {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+        border-radius: 6px;
+    }
+}
+
+@media (max-width: 360px) {
+    .coin-detail {
+        padding: 0.5rem;
+    }
+    
+    .coin-detail-container {
+        padding: 0.5rem;
+    }
+    
+    .coin-header {
+        padding: 0.875rem;
+    }
+    
+    .coin-title img {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .coin-title h1 {
+        font-size: 1.1rem;
+    }
+    
+    .current-price h2 {
+        font-size: 1.2rem;
+    }
+    
+    .stat-card {
+        padding: 0.75rem;
+    }
+    
+    .stat-card h4 {
+        font-size: 0.75rem;
+    }
+    
+    .stat-card p {
+        font-size: 0.85rem;
+    }
+    
+    .chart-container {
+        padding: 0.875rem;
+    }
+    
+    .timeframe-selector button {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.75rem;
+    }
+    
+    .coin-info-section {
+        padding: 0.875rem;
+    }
+    
+    .coin-description {
+        font-size: 0.8rem;
+    }
+    
+    .converter-card {
+        padding: 0.875rem;
+    }
+    
+    .back-button {
+        padding: 0.5rem 0.875rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Touch-friendly improvements */
+@media (hover: none) and (pointer: coarse) {
+    .back-button:hover {
+        transform: none;
+    }
+    
+    .back-button:active {
+        background: rgba(30, 30, 50, 0.6);
+        transform: scale(0.95);
+    }
+    
+    .timeframe-selector button:hover {
+        background: rgba(30, 30, 50, 0.4);
+    }
+    
+    .timeframe-selector button:active {
+        background: rgba(30, 30, 50, 0.6);
+        transform: scale(0.95);
     }
 }

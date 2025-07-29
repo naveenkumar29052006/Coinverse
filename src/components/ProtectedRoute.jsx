@@ -6,7 +6,7 @@ const ProtectedRoute = ({ children }) => {
   const { authenticated, ready, isLoading } = usePrivy();
 
   if (!ready || isLoading) {
-    return null; // or a loading spinner
+    return null; 
     }
 
   if (!authenticated) {
