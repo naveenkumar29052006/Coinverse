@@ -1,0 +1,106 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 1rem;
+  background: rgba(20, 20, 35, 0.55); 
+  border-radius: 18px;
+  margin: 0 1.5rem 2rem 1.5rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  border: 1.5px solid rgba(255,255,255,0.10);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: all 0.3s cubic-bezier(.4,0,.2,1);
+  backdrop-filter: blur(18px) saturate(160%);
+  margin-top: 1rem;
+}
+
+.nav-logo {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  background: linear-gradient(90deg, #e1e1e6, #8a8af0 60%, #fff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: var(--foreground);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.08rem;
+  padding: 0.5rem 1.1rem;
+  border-radius: 10px;
+  transition: all 0.3s cubic-bezier(.4,0,.2,1);
+  position: relative;
+}
+
+.nav-links a.active,
+.nav-links a.hovered {
+  background: rgba(138, 138, 240, 0.18);
+  color: var(--primary);
+  box-shadow: 0 2px 8px rgba(138, 138, 240, 0.10);
+  transform: translateY(-2px) scale(1.07);
+}
+
+.nav-links a:hover {
+  background: rgba(138, 138, 240, 0.13);
+  color: var(--primary);
+  transform: translateY(-2px) scale(1.07);
+}
+
+.nav-auth {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-left: 1.5rem;
+}
+
+.nav-btn {
+  color: var(--foreground);
+  background: none;
+  border: none;
+  font-weight: 500;
+  font-size: 1.08rem;
+  padding: 0.5rem 1.1rem;
+  border-radius: 10px;
+  transition: all 0.3s cubic-bezier(.4,0,.2,1);
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-btn:hover, .nav-btn:focus {
+  background: rgba(138, 138, 240, 0.13);
+  color: var(--primary);
+  box-shadow: 0 2px 8px rgba(138, 138, 240, 0.10);
+  transform: translateY(-2px) scale(1.07);
+  outline: none;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem;
+    padding: 1rem;
+  }
+  .nav-links {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .nav-links a {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.98rem;
+  }
+}
