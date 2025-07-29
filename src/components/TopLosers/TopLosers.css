@@ -54,7 +54,6 @@
     font-weight: 600;
 }
 
-/* Mobile-first responsive design */
 @media (max-width: 1024px) {
     .stats-card {
         padding: 1.25rem;
@@ -171,7 +170,6 @@
     }
 }
 
-/* Touch-friendly improvements */
 @media (hover: none) and (pointer: coarse) {
     .stats-item:hover {
         transform: none;

@@ -87,7 +87,6 @@
   outline: none;
 }
 
-/* Mobile-first responsive design */
 @media screen and (max-width: 1024px) {
   .navbar {
     margin: 0 1rem 1.5rem 1rem;
@@ -212,7 +211,6 @@
   }
 }
 
-/* Touch-friendly improvements */
 @media (hover: none) and (pointer: coarse) {
   .nav-links a:hover,
   .nav-btn:hover {

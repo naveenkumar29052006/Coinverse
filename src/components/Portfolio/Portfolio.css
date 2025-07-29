@@ -218,7 +218,6 @@
   color: #e1e1e6;
 }
 
-/* Mobile-first responsive design */
 @media (max-width: 1024px) {
   .portfolio-inner {
     padding: 1.5rem;
@@ -314,7 +313,7 @@
   
   .form-input {
     padding: 0.625rem;
-    font-size: 16px; /* Prevents zoom on iOS */
+    font-size: 16px;
   }
   
   .submit-button {
@@ -322,7 +321,6 @@
     font-size: 14px;
   }
   
-  /* Convert table to card layout for mobile */
   .portfolio-table {
     display: block;
     margin-top: 1rem;
@@ -426,7 +424,6 @@
   }
 }
 
-/* Touch-friendly improvements */
 @media (hover: none) and (pointer: coarse) {
   .add-coin-button:hover,
   .submit-button:hover,

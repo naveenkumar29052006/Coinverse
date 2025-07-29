@@ -392,7 +392,6 @@
     transform: translateX(-4px);
 }
 
-/* Mobile-first responsive design */
 @media (max-width: 1024px) {
     .coin-detail {
         padding: 1.5rem;
@@ -594,7 +593,7 @@
     
     .converter-input input {
         padding: 0.7rem 0.875rem;
-        font-size: 16px; /* Prevents zoom on iOS */
+        font-size: 16px;
     }
     
     .back-button {
@@ -669,7 +668,6 @@
     }
 }
 
-/* Touch-friendly improvements */
 @media (hover: none) and (pointer: coarse) {
     .back-button:hover {
         transform: none;
