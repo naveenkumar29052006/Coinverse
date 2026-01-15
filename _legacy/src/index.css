@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #000000;
+  --color-card: #0D0D0D;
+  --color-accent: #86efac;
+  --color-secondary: #919191;
+  --color-border: #404040;
+
+  --font-sans: Geist, Inter, sans-serif;
+}
+
+@utility no-scrollbar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body {
+  @apply bg-background text-white antialiased;
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+/* React Datepicker Customization */
+.react-datepicker {
+  @apply !bg-card !border-border !font-sans !rounded-xl !shadow-2xl overflow-hidden;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.react-datepicker__header {
+  @apply !bg-card !border-b !border-border !rounded-t-xl;
+}
+
+.react-datepicker__current-month,
+.react-datepicker__day-name {
+  @apply !text-white;
+}
+
+.react-datepicker__day {
+  @apply !text-secondary !rounded-lg transition-colors;
+}
+
+.react-datepicker__day:hover {
+  @apply !bg-white/10 !text-white;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+  @apply !bg-accent !text-black font-bold;
+}
+
+.react-datepicker__day--disabled {
+  @apply !text-white/20 cursor-not-allowed;
+}
+
+.react-datepicker__day--disabled:hover {
+  @apply !bg-transparent;
+}
+
+.react-datepicker__navigation-icon::before {
+  @apply !border-white;
+}
+
+.react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle {
+  @apply !fill-card !text-card;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
